@@ -1,0 +1,1 @@
+export default require('knex')(require('../../../config.json').database)

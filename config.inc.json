@@ -1,0 +1,18 @@
+{
+  "bot": {
+    "token": "",
+    "shard": {
+      "total": 2
+    }
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "",
+      "port": 3306,
+      "user": "",
+      "password": "",
+      "database": ""
+    }
+  }
+}
