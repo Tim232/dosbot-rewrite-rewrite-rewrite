@@ -21,7 +21,7 @@ export type FullCommand = Command & {
 const commands: any = {}
 
 commands.general = require('./general')
-
+commands.economy = require('./economy')
 commands.dev = require('./dev')
 
 Object.keys(commands).forEach(c => {

@@ -1,4 +1,3 @@
-import { Message } from "discord.js";
 import { Command } from "..";
 import { createMessageEmbed } from "../../tools/interface/embed";
 
@@ -35,10 +34,8 @@ export const unregister: Command = {
         await msg.channel.send(createMessageEmbed("취소되었습니다."));
       }
       if (reason === "confirmed") {
-        await global.db("users").insert({
-          id: msg.author.id,
-        });
-        await msg.channel.send(createMessageEmbed("가입되었습니다.", "GREEN"));
+        await global.db("users").where('id', msg.author.id).delete();
+        await msg.channel.send(createMessageEmbed("탈퇴가 완료되었습니다.", "GREEN"));
       }
     });
   },
