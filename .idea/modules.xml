@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dosbot-rewrite.iml" filepath="$PROJECT_DIR$/.idea/dosbot-rewrite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dosbot-rrrewrite-client/.idea/dosbot-rrrewrite-client.iml" filepath="$PROJECT_DIR$/../dosbot-rrrewrite-client/.idea/dosbot-rrrewrite-client.iml" />
     </modules>
   </component>
 </project>

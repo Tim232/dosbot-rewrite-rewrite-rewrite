@@ -1,0 +1,14 @@
+type Guild {
+    id: String!
+    name: String!
+    icon: String
+    owner: Boolean!
+    permissions: Int!
+    features: [String]
+    permissions_new: String!
+    bot: Boolean!
+}
+
+type Query {
+    guilds: [Guild]!
+}

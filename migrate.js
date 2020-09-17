@@ -11,15 +11,18 @@ switch (process.argv[2]) {
         break
     case 'migrate':
         (async () => {
-            await knex.schema.createTable('guilds', function (table) {
-                table.text('id').notNullable()
-                table.text('lang').notNullable()
-                table.json('config').notNullable()
-            })
-            await knex.schema.createTable('users', function (table) {
-                table.text('id').notNullable()
-                table.bigInteger('balance').notNullable().defaultTo(0)
-            })
+            try {
+                await knex.schema.createTable('guilds', function (table) {
+                    table.text('id').notNullable()
+                    table.json('config').defaultTo('{}').notNullable()
+                })
+            } catch (e) {}
+            try {
+                await knex.schema.createTable('users', function (table) {
+                    table.text('id').notNullable()
+                    table.bigInteger('balance').defaultTo(0).notNullable()
+                })
+            } catch(e) {}
             console.log('complete')
             await knex.destroy()
         })()
